@@ -1,0 +1,203 @@
+POST http://localhost:3001/api/auth/register
+Content-Type: application/json
+
+{
+    "name": "",
+    "email": "ninja@gmail.com",
+    "password": "123",
+    "confirmPassword": "123"
+}
+
+
+###
+POST http://localhost:3001/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "kimnhu@gmail.com",
+    "password": "123"
+}
+
+###
+POST http://localhost:3001/api/user/change-password
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Mjc5NGIzZWZhYjY5MmNkNTdkMTQyOGMiLCJpYXQiOjE2NTMxOTg2OTQsImV4cCI6MTY1MzIzNDY5NH0.wRtwUh50hyxP46IMiDkFC_LBI1O2k06TlJuCRyDvzWQ
+Content-Type: application/json
+
+{
+    "oldPassword": "123",
+    "newPassword": "123"
+}
+
+
+###
+GET http://localhost:3001/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Mjc5NGIzZWZhYjY5MmNkNTdkMTQyOGMiLCJpYXQiOjE2NTMxOTcxOTEsImV4cCI6MTY1MzIzMzE5MX0.DgpdUZVIfPujs4A3KKglXHtFfSKrKrK90CGUU6ym3GM
+
+###
+
+GET http://localhost:3001/api/posts/62794f981d47d6ed235c0cba
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Mjc5NGIzZWZhYjY5MmNkNTdkMTQyOGMiLCJpYXQiOjE2NTMxOTcxOTEsImV4cCI6MTY1MzIzMzE5MX0.DgpdUZVIfPujs4A3KKglXHtFfSKrKrK90CGUU6ym3GM
+
+###
+POST http://localhost:3001/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Mjc5NGFlM2ZhYjY5MmNkNTdkMTQyODgiLCJpYXQiOjE2NTIxMTgyMjQsImV4cCI6MTY1MjE1NDIyNH0.7EAZ1dbzEJjwXR8o-AwMoBKXYhJU8LjhnYWoNf5U-O8
+
+{
+    "content": " Moi kiem duoc bang tuan hoan nguyen to hoa hoc, vuive-ing"
+}
+
+###
+GET http://localhost:3001/api/comments/6252854a4c49cb901069a280
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjUyODUzMjNmNGIyZGZhMDU0NjUzM2MiLCJpYXQiOjE2NTIxMTE1MTMsImV4cCI6MTY1MjE0NzUxM30.6zhPAA7La8qbZeSndD8EMnViT0XmsKmLAdFWbjGvH3w
+
+###
+POST http://localhost:3001/api/comments/625bbc34fce09e34f4f79ea8/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Mjc5NGM4MGZhYjY5MmNkNTdkMTQyYTQiLCJpYXQiOjE2NTIxMTgyODQsImV4cCI6MTY1MjE1NDI4NH0.j2hti1uH3cd5vkTOnn8Rf-dzzaRKaKbpDigeMAe1Al4
+
+{
+    "content": " hello cac ban, minh la ninja"
+}
+
+###
+POST http://localhost:3001/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Mjc5NGIzZWZhYjY5MmNkNTdkMTQyOGMiLCJpYXQiOjE2NTMwNjkzMjUsImV4cCI6MTY1MzEwNTMyNX0.ydpu5h92i66fuSlXG5DRTmaPgFcOy4kCwUeJsFBhlZ0
+
+{
+    "content": "Khang post 3",
+    "images": [
+        "https://res.cloudinary.com/wjbucloud/image/upload/v1653069091/qamxhsmcyxl6qaz7dnkk.jpg",
+        "https://res.cloudinary.com/wjbucloud/image/upload/v1653069091/rfylddtrk0qduuk1ekb1.jpg",
+        "https://res.cloudinary.com/wjbucloud/image/upload/v1653069091/nsp7y91sphyutjndacg4.jpg"
+    ]
+}
+
+###
+GET http://localhost:3001/api/home/post
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Mjc5NGIzZWZhYjY5MmNkNTdkMTQyOGMiLCJpYXQiOjE2NTMyODM2NDksImV4cCI6MTY1MzMxOTY0OX0.D4HXHp0ofnOyw3ypHs0BTl8QrdfYnaNgoglU3V1x2x8
+
+###
+GET http://localhost:3001/api/home/relate
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjZkMzlmYmFlMWE1YzIyNGI2N2FiOTUiLCJpYXQiOjE2NTIxMTQ3OTUsImV4cCI6MTY1MjE1MDc5NX0.XOQyQhuHkXb9SYPmz6yOE8c1P_uvURfSpORit5NckNU
+
+###
+POST http://localhost:3001/api/user/search
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjY1MTUyMzIzMzgxYTYxMmJhOGUzMTQiLCJpYXQiOjE2NTA3OTE3MTUsImV4cCI6MTY1MDgyNzcxNX0.dgaVP79zyLYem4hXsAuo4IFEplRPxhgu-5EORQ6TjL0
+
+{
+    "search": "@"
+}
+
+###
+GET http://localhost:3001/api/user/62794b3efab692cd57d1428c
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Mjc5NGFlM2ZhYjY5MmNkNTdkMTQyODgiLCJpYXQiOjE2NTI3OTMxMjIsImV4cCI6MTY1MjgyOTEyMn0.zRwRNo461t3dXCyPyEt8c3Fls5jMQqbV6czlxrDKv6M
+
+###
+PATCH http://localhost:3001/api/user/user/626d39fbae1a5c224b67ab95/follow
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Mjc5NGI1NGZhYjY5MmNkNTdkMTQyOGYiLCJpYXQiOjE2NTI2MzEzOTAsImV4cCI6MTY1MjY2NzM5MH0.JdJrT_Cw0nkfcRAPQyDYExMUDvigCdto5c2RQZWqoGw
+
+
+###
+PATCH http://localhost:3001/api/user/user/62794beafab692cd57d14295/unfollow
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Mjc5NGFlM2ZhYjY5MmNkNTdkMTQyODgiLCJpYXQiOjE2NTI2MzAxNjcsImV4cCI6MTY1MjY2NjE2N30.bGYvDHDmVsz-XQ1OKnVehunHoGmD2hMjb4OJ-5gnoYM
+
+
+###
+POST http://localhost:3001/api/chat/createCon
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjU2Y2U2MWMyMDdhNGU3MWZjNWVlYzEiLCJpYXQiOjE2NTA0MTk0NDgsImV4cCI6MTY1MDQ1NTQ0OH0.kv5nLUlt0ZOD5BDfdAf7Hg3-M4InEHRBpz_NyYkj38k
+
+{
+    "name": "Khang group chat 1",
+    "usersId": [
+        "625283db28644968034d08a3",
+        "625285323f4b2dfa0546533c",
+        "6256ce61c207a4e71fc5eec1"
+    ]
+}
+
+###
+PATCH http://localhost:3001/api/chat/addUser/625e6c382da7138ae8256ce1/625283db28644968034d08a3
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjU2Y2U2MWMyMDdhNGU3MWZjNWVlYzEiLCJpYXQiOjE2NTAzNTU4NDMsImV4cCI6MTY1MDM5MTg0M30.jqLl6hngpZrsdkYUDlH1HCwVXcSSAAsMoYU1p9y89hA
+
+###
+PUT  http://localhost:3001/api/comments/ul/6258d8c2b3040c0398131c09
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjUyODUzMjNmNGIyZGZhMDU0NjUzM2MiLCJpYXQiOjE2NTE4NDg5NzgsImV4cCI6MTY1MTg4NDk3OH0.FH9hriEmkJW9MUW2ZRNRD6BLfeLXHJhIIRQWadxlnBs
+
+###
+GET  http://localhost:3001/api/user/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjU2Y2U2Y2MyMDdhNGU3MWZjNWVlYzQiLCJpYXQiOjE2NTIxMDQxNDcsImV4cCI6MTY1MjE0MDE0N30.ohEZbGySSVjNoXL1k3HDZNtl-5IAvM0YnTtBdSD3McQ
+
+{
+    "_id": "fhofi"
+}
+
+###
+GET http://localhost:3001/api/chat/getCon
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjU2Y2U2MWMyMDdhNGU3MWZjNWVlYzEiLCJpYXQiOjE2NTAzNTYxMTAsImV4cCI6MTY1MDM5MjExMH0.1N3XnVw9ruEVryMhxE9zOrthssoZ_njApcH1W-kRSRg
+
+### 
+GET http://localhost:3001/api/chat/getContact
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Mjc5NGJlMGZhYjY5MmNkNTdkMTQyOTIiLCJpYXQiOjE2NTMxMDc5MDksImV4cCI6MTY1MzE0MzkwOX0.qzfVjP_NQUtrt9gyN5oHLpvqVQGNd8QkOYg1ANR6x2w
+
+###
+GET http://localhost:3001/api/user/contact
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjUyODNkYjI4NjQ0OTY4MDM0ZDA4YTMiLCJpYXQiOjE2NTA3MDk4MzUsImV4cCI6MTY1MDc0NTgzNX0.9qVdbiskytppOVfVsfWuZjEDeU1iW5-i5-hqrIKHBBk
+
+###
+GET http://localhost:3001/api/chat/62657065df68a8ee7892cfa9
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjUyODUzMjNmNGIyZGZhMDU0NjUzM2MiLCJpYXQiOjE2NTA4MTUyNTAsImV4cCI6MTY1MDg1MTI1MH0.X2Hc4IQkQOkDE5BlU7if3HiKLnah9cedBPa9fnqsm4E
+
+###
+GET https://localhost:3001/api/posts/62794f061d47d6ed235c0cb4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Mjc5NGJlMGZhYjY5MmNkNTdkMTQyOTIiLCJpYXQiOjE2NTMxMDgwMzcsImV4cCI6MTY1MzE0NDAzN30.EqwXvy9BNnlHxlHhl4TK8frXVxJT65tz517CzTYy2MU
+
+###
+POST http://localhost:3001/api/user/update
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Mjc5NGI1NGZhYjY5MmNkNTdkMTQyOGYiLCJpYXQiOjE2NTI1Nzc5NDUsImV4cCI6MTY1MjYxMzk0NX0.MNG3Uck8hqSO4cGXYdEvn1mRIQZxS31YH-MBfWlbjzs
+
+{
+    "name": "giathai1"
+}
+
+###
+GET http://localhost:3001/api/user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Mjc5NGI1NGZhYjY5MmNkNTdkMTQyOGYiLCJpYXQiOjE2NTI1OTc4MDUsImV4cCI6MTY1MjYzMzgwNX0.6gUoMZK-TFv-cgI5FMdaF7zNhzdy_3ormQT2Z-04HY0
+
+
+###
+PATCH http://localhost:3001/api/chat/62820050c8d09526492fac49/changeName
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Mjc5NGIzZWZhYjY5MmNkNTdkMTQyOGMiLCJpYXQiOjE2NTI5MzA4NDUsImV4cCI6MTY1Mjk2Njg0NX0.zEftgjuufBeuzyyuzYb3dQd2N06ViI7aNNohxruO2DQ
+
+{
+    "newName": "Hoi nhung nguoi chan doi"
+}
+
+
+###
+GET http://localhost:3001/api/user/users/getAllUsers
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Mjc5NGIzZWZhYjY5MmNkNTdkMTQyOGMiLCJpYXQiOjE2NTI5NDY0MTQsImV4cCI6MTY1Mjk4MjQxNH0.Kmb04nsp_K4WDk2azlFVO2kJIw8sUx__k-YV-A_llpY
+
+###
+POST http://localhost:3001/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Mjc5NGIzZWZhYjY5MmNkNTdkMTQyOGMiLCJpYXQiOjE2NTMwNzEzNTYsImV4cCI6MTY1MzEwNzM1Nn0.GedAjDZpuDt708L8vNApGNF6bBPkLHNuxEKUpKE5YtQ
+
+{
+    "content": "Khang post 3",
+    "images": [
+        "https://res.cloudinary.com/wjbucloud/image/upload/v1653069091/qamxhsmcyxl6qaz7dnkk.jpg",
+        "https://res.cloudinary.com/wjbucloud/image/upload/v1653069091/rfylddtrk0qduuk1ekb1.jpg",
+        "https://res.cloudinary.com/wjbucloud/image/upload/v1653069091/nsp7y91sphyutjndacg4.jpg"
+    ]
+}
